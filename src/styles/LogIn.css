@@ -1,0 +1,120 @@
+:root {
+    --primary-bg: #f4f5f7;
+    --sidebar-bg: #343a40;
+    --button-bg: #495057;
+    --button-hover: #17a2b8;
+    --highlight-color: #dcf8c6;
+    --text-color: #6c757d;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --transition: 0.3s ease-in-out;
+  }
+  
+  /* General Page Styling */
+  /* body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+   */
+  .auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-bg);
+  }
+  
+  .auth-card {
+    background: white;
+    padding: 40px;
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .auth-title {
+    font-size: 24px;
+    color: var(--sidebar-bg);
+    margin-bottom: 20px;
+  }
+  
+  .auth-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg);
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    padding: 10px 15px;
+    transition: border var(--transition);
+  }
+  
+  .input-group:hover {
+    border-color: var(--button-hover);
+  }
+  
+  .input-icon {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-right: 10px;
+  }
+  
+  .auth-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+  }
+  
+  .auth-button {
+    width: 100%;
+    background: var(--button-bg);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: background-color var(--transition), transform var(--transition);
+  }
+  
+  .auth-button:hover {
+    background: var(--button-hover);
+    transform: scale(1.05);
+  }
+  
+  .auth-footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--text-color);
+  }
+  
+  .toggle-link {
+    color: var(--button-hover);
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+  
+  .toggle-link:hover {
+    color: var(--sidebar-bg);
+  }
+  

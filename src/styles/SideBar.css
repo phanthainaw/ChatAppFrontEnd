@@ -1,0 +1,113 @@
+.sideBar {
+    background: #343a40; /* Dark theme */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    position: relative;
+    z-index: 1;
+
+}
+
+.sideBar .avatar {
+    border: 2px solid white;
+    padding: 5px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.notificationBox {
+    position: absolute;
+    top: 115px; /* Adjust top position as needed */
+    left: 90px; /* Position the box next to the avatar */
+    background-color: #f8f9fa; /* Light background for the box */
+    color: #343a40; /* Dark text color */
+    padding: 20px;
+    height: 400px;
+    width: 300px;
+    border-radius: 8px;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    opacity: 0; /* Start with hidden box */
+    pointer-events: none; /* Prevent interaction until triggered */
+    transition: opacity 0.2s ease; /* Smooth transition */
+    border: 1px solid #ddd; /* Light border for separation */
+    font-family: 'Arial', sans-serif;
+}
+
+.notificationBox.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.notificationBox p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.notificationContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 10px; /* Space between notifications */
+}
+
+.notificationContainer p {
+    font-size: 13px;
+    color: #495057; /* Darker text color for content */
+}
+
+.notificationContainer p:last-child {
+    font-size: 12px;
+    color: #6c757d; /* Lighter color for timestamp */
+}
+
+/* Styling the notification toggle button (bell icon) */
+.chat-button {
+    position: relative;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.notification-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 3px 8px;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Make sure the button has spacing around it */
+.chat-button {
+    margin: 10px;
+    background-color: #535353;
+}
+
+/* Add smooth transitions for the notification toggle */
+.notificationBox {
+    transition: opacity 0.2s ease, transform 0.3s ease;
+}
+
+.notificationBox.active {
+    transform: translateY(0);
+}
+
+.notificationBox:not(.active) {
+    transform: translateY(-10px); /* Slide down effect */
+}
+

@@ -1,0 +1,130 @@
+:root {
+    --primary-bg: #f4f5f7;
+    --sidebar-bg: #343a40;
+    --button-bg: #495057;
+    --button-hover: #17a2b8;
+    --text-color: #6c757d;
+    --highlight-color: #dcf8c6;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --transition: 0.3s ease-in-out;
+  }
+  
+  /* General Page Styling */
+  /* body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  } */
+  
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-bg);
+  }
+  
+  .profile-card {
+    background: white;
+    padding: 40px;
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--button-bg);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+  }
+  
+  .edit-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition);
+  }
+  
+  .edit-button:hover {
+    background: var(--button-hover);
+    transform: scale(1.1);
+  }
+  
+  .profile-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .profile-field {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-field label {
+    font-weight: bold;
+    color: var(--sidebar-bg);
+    margin-bottom: 5px;
+  }
+  
+  .profile-field p {
+    margin: 0;
+    color: var(--text-color);
+  }
+  
+  .profile-input {
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border var(--transition);
+  }
+  
+  .profile-input:focus {
+    border-color: var(--button-hover);
+  }
+  
+  @media (max-width: 768px) {
+    .profile-card {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .profile-avatar {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .profile-input {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  

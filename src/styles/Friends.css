@@ -1,0 +1,127 @@
+.friendSearchBar {
+    width: auto; /* Fixed width property */
+    height: 40px;
+    border-radius: 20px; /* Use your preferred value */
+    margin: 10px;
+    border: 1px solid #ced4da;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border 0.3s ease-in-out;
+    display: block;
+}
+.friendContainer{
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    position: relative;
+ }
+
+ .friendRequestNBanList{
+    position: absolute;
+    right: 0px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 445px 445px;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out
+ }
+
+.friendRequestNBanList.close{
+    transform: translateX(450px);
+}
+
+
+.friendRequestList{background-color: #f4f5f7;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    overflow: auto; /* Disable scrolling */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For IE and Edge */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid #ced4da;
+}
+.avatarFriendRequest{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.friendRequest{padding: 10px;
+    background-color: white;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 60px 1fr 50px 50px;
+    align-items: center;
+}
+.friendRequest_Button:hover{
+    color: rgb(8, 134, 252);
+    cursor: pointer;
+}
+.blockedUser{
+    padding: 10px;
+    background-color: white;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 60px 1fr 50px;
+    align-items: center;
+}
+.friendList{
+    padding-right: 10px;
+    position: relative;
+    height: 80%;
+    overflow: scroll;
+}
+.friendList_searchButton{
+    position: absolute;
+    left: 28px;
+    top: 23px;
+    font-size: 1.2em;
+}
+.friend{
+    background-color: white;
+    height: 70px;
+    margin: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px 50px 50px;
+    align-items: center;
+}
+
+.banList_ToggleButton{
+    position: absolute;
+    right: 5px;
+    top: 45vh;
+    transition: transform 0.3s ease-in-out
+}
+
+.banList_ToggleButton.open{
+    right: 450px;
+    transform: scaleX(-1);
+}
+
+.findUserInfoNFriendRequest{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 70px 300px 3fr;
+}
+
+.findUserInfo{
+    display: grid;
+    grid-template-columns:300px 1fr ;
+}
+
+.findUserInfo_avatar{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--button-bg);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+}
