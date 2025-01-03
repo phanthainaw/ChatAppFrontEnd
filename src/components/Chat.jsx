@@ -66,7 +66,7 @@ function Chat() {
     }
     function setWSCallback(stompClient, setMessages, conversationId, conversations, setConversations, messageMode) {
         stompClient.onConnect = (frame) => {
-            // console.log('Connected');
+            console.log('Connected');
             stompClient.subscribe('/user/queue/messages', async (message) => {
                 const newMessage = JSON.parse(message.body);
                 switch (newMessage.notificationType) {
