@@ -148,6 +148,7 @@ function Friends() {
 
     async function blockUser(userId){
         await sendPostRequest('http://localhost:8081/api/user/block', {destinationUserId: userId, fixBug: ''})
+        await getFriendList()
         await getBlockList()
     }
 
@@ -273,7 +274,6 @@ function Friends() {
 }
 
 function FriendRequest({request, getFriendList, getFriendRequest, acceptFriendRequest, rejectFriendRequest}) {
-
     return (
         <div className="friendRequest">
             <img className="avatarFriendRequest" src={!!request.senderAvt?request.senderAvt:avatarImage} alt="Friend Request Avatar"/>

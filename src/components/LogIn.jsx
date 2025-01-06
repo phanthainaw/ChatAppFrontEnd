@@ -55,7 +55,7 @@ const AuthPage = () => {
                 if (!response.ok) {
                     throw new Error("Failed to sign up");
                 }
-                alert("Đăng Nhập Thành Công");
+                alert("Đăng Kí Thành Công");
                 logIn()
             } catch (error) {
                 console.error("Error during sign-up:", error);
